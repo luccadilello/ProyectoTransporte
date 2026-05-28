@@ -397,3 +397,16 @@ footer {
     }
 
 }
+.hero img {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    display: block;
+
+    margin: 0 auto 20px auto;
+
+    border-radius: 12px;
+
+}
