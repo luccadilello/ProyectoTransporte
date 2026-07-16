@@ -2,6 +2,11 @@
 /* RESET */
 /* ========================= */
 
+/* Se aplica a todos los elementos.
+   box-sizing: border-box hace que el ancho y alto incluyan
+   el padding y el borde, facilitando el diseño y evitando
+   que los elementos ocupen más espacio del esperado. */
+
 * {
 
     box-sizing: border-box;
@@ -9,10 +14,13 @@
 }
 
 
-
 /* ========================= */
 /* COLORES */
 /* ========================= */
+
+/* :root define variables CSS.
+   Las usamos para reutilizar colores en todo el sitio.
+   Si queremos cambiar un color, solo modificamos la variable. */
 
 :root {
 
@@ -29,6 +37,15 @@
 /* ========================= */
 /* BODY */
 /* ========================= */
+
+/* Configura el estilo general del sitio.
+   margin:0 elimina el margen por defecto.
+   font-family define la tipografía.
+   background-color establece el color de fondo.
+   color define el color del texto.
+   min-height:100vh hace que ocupe toda la altura de la pantalla.
+   display:flex organiza el contenido en columnas.
+   flex-direction:column coloca header, main y footer uno debajo del otro. */
 
 body {
 
@@ -53,6 +70,12 @@ body {
 /* HEADER */
 /* ========================= */
 
+/* Personaliza el encabezado.
+   display:flex acomoda el título y el menú.
+   justify-content:space-between los separa hacia los extremos.
+   align-items:center los centra verticalmente.
+   flex-wrap permite que en pantallas pequeñas el menú baje de línea. */
+
 header {
 
     background-color: var(--azul-principal);
@@ -76,6 +99,9 @@ header {
 /* TITULO PRINCIPAL */
 /* ========================= */
 
+/* Elimina el margen por defecto del h1 para que quede
+   correctamente alineado dentro del header. */
+
 h1 {
 
     margin: 0;
@@ -86,6 +112,11 @@ h1 {
 /* ========================= */
 /* MENU */
 /* ========================= */
+
+/* Quita los estilos de lista.
+   display:flex coloca los botones horizontalmente.
+   gap agrega separación entre ellos.
+   margin y padding eliminan espacios automáticos. */
 
 nav ul {
 
@@ -105,6 +136,11 @@ nav ul {
 /* ========================= */
 /* LINKS */
 /* ========================= */
+
+/* Personaliza los enlaces del menú.
+   text-decoration:none elimina el subrayado.
+   border-radius redondea los botones.
+   transition suaviza el cambio cuando se pasa el mouse. */
 
 nav a,
 .active {
@@ -126,6 +162,9 @@ nav a,
 
 /* HOVER */
 
+/* Cambia el color cuando el usuario pasa el mouse
+   sobre un enlace del menú. */
+
 nav a:hover {
 
     background-color: var(--celeste);
@@ -134,6 +173,8 @@ nav a:hover {
 
 
 /* PAGINA ACTUAL */
+
+/* Resalta la página en la que se encuentra el usuario. */
 
 .active {
 
@@ -145,6 +186,12 @@ nav a:hover {
 /* ========================= */
 /* MAIN */
 /* ========================= */
+
+/* Define el contenedor principal.
+   width ocupa el 90% de la pantalla.
+   max-width evita que sea demasiado ancho.
+   margin centra el contenido.
+   flex:1 hace que el main ocupe el espacio disponible. */
 
 main {
 
@@ -163,6 +210,8 @@ main {
 /* TITULOS */
 /* ========================= */
 
+/* Estilo para títulos secundarios. */
+
 h2 {
 
     color: var(--azul-principal);
@@ -173,6 +222,7 @@ h2 {
 
 }
 
+/* Estilo para subtítulos dentro de las tarjetas. */
 
 h3 {
 
@@ -186,6 +236,10 @@ h3 {
 /* ========================= */
 /* HERO */
 /* ========================= */
+
+/* Es el bloque principal de cada página.
+   Tiene fondo blanco, bordes redondeados,
+   espacio interno y una sombra para destacarlo. */
 
 .hero {
 
@@ -206,6 +260,11 @@ h3 {
 /* GRID DE CARDS */
 /* ========================= */
 
+/* Organiza las tarjetas automáticamente.
+   display:grid crea una grilla.
+   auto-fit adapta la cantidad de columnas según el espacio.
+   minmax indica el ancho mínimo y máximo de cada tarjeta. */
+
 .cards-grid {
 
     display: grid;
@@ -220,6 +279,10 @@ h3 {
 /* ========================= */
 /* CARDS */
 /* ========================= */
+
+/* Da formato a cada tarjeta.
+   Fondo blanco, bordes redondeados,
+   sombra y transición para la animación. */
 
 .card {
 
@@ -238,6 +301,9 @@ h3 {
 
 /* HOVER CARDS */
 
+/* Hace que la tarjeta se eleve ligeramente
+   al pasar el mouse. */
+
 .card:hover {
 
     transform: translateY(-4px);
@@ -248,6 +314,9 @@ h3 {
 /* ========================= */
 /* IMAGENES */
 /* ========================= */
+
+/* Evita que las imágenes se desborden.
+   display:block elimina espacios innecesarios. */
 
 img {
 
@@ -262,12 +331,17 @@ img {
 /* IMAGEN PRINCIPAL */
 /* ========================= */
 
-
+/* Este apartado quedó reservado por si se desea
+   agregar estilos específicos para una imagen principal. */
 
 
 /* ========================= */
 /* IMAGENES EN CARDS */
 /* ========================= */
+
+/* Todas las imágenes de las tarjetas tendrán
+   el mismo tamaño para mantener un diseño uniforme.
+   object-fit:cover evita deformaciones. */
 
 .card img {
 
@@ -288,12 +362,13 @@ img {
 /* LISTAS */
 /* ========================= */
 
+/* Ajusta el espacio de las listas. */
+
 ul {
 
     padding-left: 20px;
 
 }
-
 
 li {
 
@@ -305,6 +380,8 @@ li {
 /* ========================= */
 /* TABLAS */
 /* ========================= */
+
+/* Define el estilo general de las tablas. */
 
 table {
 
@@ -318,6 +395,9 @@ table {
 
 
 /* CELDAS */
+
+/* Aplica borde, separación y alineación
+   tanto a encabezados como a datos. */
 
 th,
 td {
@@ -333,6 +413,9 @@ td {
 
 /* ENCABEZADOS */
 
+/* Colorea los títulos de la tabla
+   para diferenciarlos de los datos. */
+
 th {
 
     background-color: var(--azul-principal);
@@ -344,6 +427,8 @@ th {
 
 /* FILAS */
 
+/* Da fondo blanco a las celdas de información. */
+
 td {
 
     background-color: var(--blanco);
@@ -354,6 +439,9 @@ td {
 /* ========================= */
 /* FOOTER */
 /* ========================= */
+
+/* Define el pie de página con colores institucionales
+   y texto centrado. */
 
 footer {
 
@@ -371,6 +459,11 @@ footer {
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
+
+/* Cuando la pantalla es menor a 700px,
+   adapta el diseño para celulares.
+   El header pasa a organizarse en columna,
+   el menú también y el contenido ocupa más ancho. */
 
 @media (max-width: 700px) {
 
@@ -397,6 +490,16 @@ footer {
     }
 
 }
+
+
+/* ========================= */
+/* IMAGEN DEL HERO */
+/* ========================= */
+
+/* Centra la imagen principal,
+   limita su tamaño máximo
+   y redondea sus bordes. */
+
 .hero img {
 
     width: 100%;
